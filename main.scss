@@ -1,0 +1,933 @@
+*{box-sizing: border-box}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.header {
+    background-image: url(Image/satisfaction-client-immobilier-1024x683-2.jpg);
+    background-size: 100% 100%;
+    height: 350px;
+
+    .logo img {
+        width: 10%;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    h1 { 
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        color:rgb(4, 46, 92);
+        text-shadow: rgb(255, 255, 255) 25px 0 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+//-----------------------------------BARRE DE NAVIGATION-----------------------------------------//
+
+.navigation {
+
+    .nav-barre {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;    
+
+        li {
+            font-size: 30px;
+            display: inline;
+            padding-left: 20px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+    
+        a {
+            text-decoration: none;
+            color:rgb(4, 46, 92);
+        }
+        
+        #nav a:hover {
+            color: rgb(165, 70, 87);
+        }
+    }
+}
+
+//----------------------------------------SECTION PRESENTATION------------------------------------------//
+
+.presentation {
+    display: flex;
+
+    .droite {
+        margin-top: 100px;
+        
+    }
+
+    h2 {
+        color:rgb(4, 46, 92);
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+
+    li {
+        list-style: none;
+        color: rgb(165, 70, 87);
+        font-size: 30px;
+        padding-top: 20px;
+        width: 450px;
+        font-family: 'Quicksand', sans-serif;
+        
+    
+    }
+
+    span {
+        padding-left: 5px;
+        color:rgb(4, 46, 92);
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }
+
+    img{max-width: 100%}
+
+    input[type=radio]{
+
+    position: absolute;
+    left: -9999px
+
+    }
+	
+    .slider-input label{
+	
+    cursor:pointer
+	
+    }
+
+    .slider-input{
+
+    overflow: hidden;
+    position: relative;
+    max-width: 1050px;
+    margin: 50px
+	
+	}
+
+
+    .photos-mini{
+	
+	
+    padding-top: 69.67%;
+    display: flex;
+
+	}
+
+    .miniature{
+
+    flex: 1; 
+    padding:2px;
+    padding-top: 8px;
+	
+    }
+	
+
+    .fenetre{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:transform .6s,opacity .6s;
+    transform:translatex(-100%);
+    opacity: 0
+	
+	}
+
+    .fen:checked~ .fenetre{
+	
+    transform:translatex(0%);
+    opacity: 1
+	
+	}
+
+    .figcaption{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .25rem;
+    transition: opacity .4s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    color:rgb(4, 46, 92);
+    background: rgba(255, 255, 255, 0.8)
+
+    }
+
+    .fen:checked~.figcaption{
+
+    opacity: 1
+	
+	}
+	
+}
+
+//---------------------------------------SECTION ANNONCE----------------------------------------//
+
+.annonce {
+    
+
+    h2 {
+        margin-left: 50px;
+        color: rgb(165, 70, 87);
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    p {
+        margin-top: 50px;
+        margin-left: 150px;
+        margin-right: 150px;
+        color: rgb(4, 46, 92);
+        font-size: 25px;
+        font-family: 'Quicksand', sans-serif;
+    }
+}
+
+.annonceSupplementaire {
+    margin-top: 50px;
+
+    h2 {
+        color:rgb(4, 46, 92);
+        padding-bottom: 50px;
+        margin-left: 50px;
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    .cards {
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .card-title {
+        color: rgb(165, 70, 87);
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 30px;
+    }
+
+    li {
+        list-style: none;
+        color: rgb(165, 70, 87);
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }
+
+    span {
+        color: rgb(4, 46, 92);
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        
+    }
+}
+
+//-------------------------------------SECTION FORMULAIRE-------------------------------------------//
+
+.formulaire {
+    background-image: url("/Image/agent-immobilier-visite.jpg");
+    background-repeat: no-repeat;   
+    background-size: 30% 30%; 
+    background-position: right bottom;
+
+
+    h2 {
+        color:rgb(165, 70, 87);
+        margin-left: 50px;
+        font-family: 'Noto Sans', sans-serif;
+        margin-top: 50px;
+    }
+
+    label {
+        color:rgb(4, 46, 92);
+        font-weight: 500;
+        margin-top: 15px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        width: 550px;
+        margin-top: 15px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }
+
+    textarea {
+        width: 550px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+}
+
+//---------------------------------------SECTION CONTACT---------------------------------------//
+
+.contact {
+    margin-top: 50px;
+
+    h2 {
+        color:rgb(4, 46, 92);
+        margin-left: 50px;
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    h3 {
+        font-size: medium;
+        margin-top: 20px;
+        color:rgb(165, 70, 87);
+        font-family: 'Quicksand', sans-serif;
+        font-size: 25px;
+    }    
+
+    .contact2 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contact2 p {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(4, 46, 92);
+        font-weight: 700;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+
+    img {
+
+        margin-top: 50px;
+        width: 30px;
+    }
+
+    .tel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .localisation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+
+    .instagram {
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+
+
+    .facebook {
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+    }
+
+    .linkedin {
+        height: 35px;
+        width: 35px;
+        margin: 10px;
+    }
+
+    .twitter {
+        height: 35px;
+        width: 35px;
+        margin: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fin {
+        display: flex;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+}
+
+//-----------------------------------RESPONSIVE------------------------------//
+
+@media screen and (max-width: 576px) {
+
+   .header {
+
+    .logo img {
+        width: 50px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-top: 80px;
+    }  
+   }
+
+   .navigation .nav-barre li {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .presentation {
+    display: flex;
+    flex-direction: column;
+
+    .droite h2 {
+        font-size: 20px;
+        margin-top: -140px;
+        margin-left: 50px;
+    }
+
+    li {
+        font-size: 20px;
+        width: 300px;
+        margin-left: 40px;
+    }
+
+    span {
+        font-size: 17px;
+    }
+
+   
+
+   }
+
+   .annonce {
+
+        h2 {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 17px;
+            margin-left: 50px;
+            margin-right: 40px;
+        }
+   }
+
+   .annonceSupplementaire {
+
+    h2 {
+        font-size: 20px;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 17px;
+    }
+
+   }
+
+   .formulaire {
+    
+
+    h2 {
+        font-size: 19px;
+        margin-left: 20px;
+    }
+
+    label {
+        display: flex;
+        justify-content: center;
+    }
+
+    background-size: 0px;
+
+    label {
+        font-size: 15px;
+    }
+
+    input {
+        font-size: 15px;
+        width: 320px;
+        margin-left: 10px;
+    }
+
+    textarea{
+        font-size: 15px;
+        width: 320px;
+        margin-left: 10px;
+    }
+    
+   }
+
+   .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .contact2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 20px;
+        margin-left: 50px;
+    }
+
+    h3 {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .localisation  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    a {
+        font-size: 15px;
+        margin-top: -12px;
+    }
+
+    iframe {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   }
+
+   .footer {
+
+    .logo img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .fin {
+        font-size: 15px;
+    }
+   }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    .header {
+
+        .logo img {
+            width: 80px;
+        }
+    
+        h1 {
+            font-size: 40px;
+            margin-top: 60px;
+        }  
+       }
+    
+       .navigation .nav-barre li {
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+       }
+    
+       .presentation {
+        display: flex;
+        flex-direction: column;
+    
+            .droite {
+                display: flex;
+                flex-wrap: wrap;
+            }        
+            .droite h2 {
+                font-size: 30px;
+                margin-top: -50px;
+                margin-left: 50px;
+            }
+    
+            li {
+                font-size: 25px;
+                width: 350px;
+                margin-left: 130px;
+            }
+    
+            span {
+                font-size: 20px;
+            }
+       }
+    
+       .annonce {
+    
+            h2 {
+                font-size: 30px;
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+    
+            p {
+                font-size: 25px;
+                margin-left: 50px;
+                margin-right: 35px;
+            }
+       }
+    
+       .annonceSupplementaire {
+    
+        h2 {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .card {
+            margin-top: 20px;
+        }
+       }
+    
+       .formulaire {
+    
+        h2 {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    
+        background-size: 0px;
+    
+        label {
+            font-size: 25px;
+        }
+    
+        input {
+            font-size: 25px;
+        }
+        
+       }
+    
+       .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .contact2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        h2{
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    
+        img {
+            width: 20px;
+
+        }
+        
+        .localisation  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .tel  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mail  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        a {
+            font-size: 20px;
+        }
+    
+        iframe {
+            width: 80px;
+            height: 80px;
+            margin-top: 15px;
+            margin-left: 35px;
+        }
+       }
+    
+       .footer {
+    
+        .logo img {
+            width: 25px;
+        }
+    
+        .fin {
+            font-size: 15px;
+        }
+       }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .header {
+
+        .logo img {
+            width: 80px;
+        }
+    
+        h1 {
+            font-size: 40px;
+            margin-top: 60px;
+        }  
+       }
+    
+       .navigation .nav-barre li {
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+       }
+    
+       .presentation {
+        display: flex;
+        flex-direction: column;
+    
+            .droite h2 {
+                font-size: 35px;
+                margin-top: -100px;
+                margin-left: 50px;
+            }
+    
+            li {
+                font-size: 25px;
+                width: 350px;
+                margin-left: 80px;
+            }
+    
+            span {
+                font-size: 20px;
+            }
+       }
+    
+       .annonce {
+    
+            h2 {
+                font-size: 35px;
+                margin-top: 50px;
+            }
+    
+            p {
+                font-size: 25px;
+                margin-left: 50px;
+                margin-right: 35px;
+            }
+       }
+    
+       .annonceSupplementaire {
+    
+        h2 {
+            font-size: 30px;
+            margin-left: 50px;
+        }
+    
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .card {
+            margin-top: 20px;
+        }
+       }
+    
+       .formulaire {
+    
+        h2 {
+            font-size: 35px;
+        }
+    
+        background-size: 0px;
+    
+        label {
+            font-size: 25px;
+        }
+    
+        input {
+            font-size: 25px;
+        }
+        
+       }
+    
+       .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .contact2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        h2{
+            font-size: 30px;
+        }
+    
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+    
+
+        
+        .localisation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .tel  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .mail  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        a {
+            font-size: 20px;
+        }
+    
+        iframe {
+            width: 150px;
+            height: 150px;
+            margin-top: 15px;
+            
+        }
+       }
+    
+       .footer {
+    
+        .logo img {
+            width: 25px;
+        }
+    
+        .fin {
+            font-size: 15px;
+        }
+       }
+    
+}

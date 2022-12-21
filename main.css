@@ -1,0 +1,697 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.header {
+  background-image: url(Image/satisfaction-client-immobilier-1024x683-2.jpg);
+  background-size: 100% 100%;
+  height: 350px;
+}
+.header .logo img {
+  width: 10%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.header h1 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(4, 46, 92);
+  text-shadow: rgb(255, 255, 255) 25px 0 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation .nav-barre {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.navigation .nav-barre li {
+  font-size: 30px;
+  display: inline;
+  padding-left: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+.navigation .nav-barre a {
+  text-decoration: none;
+  color: rgb(4, 46, 92);
+}
+.navigation .nav-barre #nav a:hover {
+  color: rgb(165, 70, 87);
+}
+
+.presentation {
+  display: flex;
+}
+.presentation .droite {
+  margin-top: 100px;
+}
+.presentation h2 {
+  color: rgb(4, 46, 92);
+  font-family: "Noto Sans", sans-serif;
+}
+.presentation li {
+  list-style: none;
+  color: rgb(165, 70, 87);
+  font-size: 30px;
+  padding-top: 20px;
+  width: 450px;
+  font-family: "Quicksand", sans-serif;
+}
+.presentation span {
+  padding-left: 5px;
+  color: rgb(4, 46, 92);
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+}
+.presentation img {
+  max-width: 100%;
+}
+.presentation input[type=radio] {
+  position: absolute;
+  left: -9999px;
+}
+.presentation .slider-input label {
+  cursor: pointer;
+}
+.presentation .slider-input {
+  overflow: hidden;
+  position: relative;
+  max-width: 1050px;
+  margin: 50px;
+}
+.presentation .photos-mini {
+  padding-top: 69.67%;
+  display: flex;
+}
+.presentation .miniature {
+  flex: 1;
+  padding: 2px;
+  padding-top: 8px;
+}
+.presentation .fenetre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s, opacity 0.6s;
+  transform: translatex(-100%);
+  opacity: 0;
+}
+.presentation .fen:checked ~ .fenetre {
+  transform: translatex(0%);
+  opacity: 1;
+}
+.presentation .figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.25rem;
+  transition: opacity 0.4s;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  color: rgb(4, 46, 92);
+  background: rgba(255, 255, 255, 0.8);
+}
+.presentation .fen:checked ~ .figcaption {
+  opacity: 1;
+}
+
+.annonce h2 {
+  margin-left: 50px;
+  color: rgb(165, 70, 87);
+  font-family: "Noto Sans", sans-serif;
+}
+.annonce p {
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(4, 46, 92);
+  font-size: 25px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.annonceSupplementaire {
+  margin-top: 50px;
+}
+.annonceSupplementaire h2 {
+  color: rgb(4, 46, 92);
+  padding-bottom: 50px;
+  margin-left: 50px;
+  font-family: "Noto Sans", sans-serif;
+}
+.annonceSupplementaire .cards {
+  display: flex;
+  justify-content: space-around;
+}
+.annonceSupplementaire .card-title {
+  color: rgb(165, 70, 87);
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 30px;
+}
+.annonceSupplementaire li {
+  list-style: none;
+  color: rgb(165, 70, 87);
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+}
+.annonceSupplementaire span {
+  color: rgb(4, 46, 92);
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+.annonceSupplementaire .btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.formulaire {
+  background-image: url("/Image/agent-immobilier-visite.jpg");
+  background-repeat: no-repeat;
+  background-size: 30% 30%;
+  background-position: right bottom;
+}
+.formulaire h2 {
+  color: rgb(165, 70, 87);
+  margin-left: 50px;
+  font-family: "Noto Sans", sans-serif;
+  margin-top: 50px;
+}
+.formulaire label {
+  color: rgb(4, 46, 92);
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+}
+.formulaire .form {
+  display: flex;
+  justify-content: center;
+}
+.formulaire input {
+  width: 550px;
+  margin-top: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+}
+.formulaire textarea {
+  width: 550px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+
+.contact {
+  margin-top: 50px;
+}
+.contact h2 {
+  color: rgb(4, 46, 92);
+  margin-left: 50px;
+  font-family: "Noto Sans", sans-serif;
+}
+.contact h3 {
+  font-size: medium;
+  margin-top: 20px;
+  color: rgb(165, 70, 87);
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+}
+.contact .contact2 {
+  display: flex;
+  justify-content: space-around;
+}
+.contact .contact2 p {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+.contact a {
+  text-decoration: none;
+  color: rgb(4, 46, 92);
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+.contact img {
+  margin-top: 50px;
+  width: 30px;
+}
+.contact .tel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .localisation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 50px;
+}
+.footer .instagram {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+.footer .facebook {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+.footer .linkedin {
+  height: 35px;
+  width: 35px;
+  margin: 10px;
+}
+.footer .twitter {
+  height: 35px;
+  width: 35px;
+  margin: 10px;
+}
+.footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .fin {
+  display: flex;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media screen and (max-width: 576px) {
+  .header .logo img {
+    width: 50px;
+  }
+  .header h1 {
+    font-size: 25px;
+    margin-top: 80px;
+  }
+  .navigation .nav-barre li {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation .droite h2 {
+    font-size: 20px;
+    margin-top: -140px;
+    margin-left: 50px;
+  }
+  .presentation li {
+    font-size: 20px;
+    width: 300px;
+    margin-left: 40px;
+  }
+  .presentation span {
+    font-size: 17px;
+  }
+  .annonce h2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .annonce p {
+    font-size: 17px;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+  .annonceSupplementaire h2 {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 20px;
+  }
+  .annonceSupplementaire .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .annonceSupplementaire .card {
+    margin-top: 20px;
+  }
+  .annonceSupplementaire .card-title {
+    font-size: 20px;
+  }
+  .annonceSupplementaire li {
+    font-size: 20px;
+  }
+  .annonceSupplementaire span {
+    font-size: 17px;
+  }
+  .formulaire {
+    background-size: 0px;
+  }
+  .formulaire h2 {
+    font-size: 19px;
+    margin-left: 20px;
+  }
+  .formulaire label {
+    display: flex;
+    justify-content: center;
+  }
+  .formulaire label {
+    font-size: 15px;
+  }
+  .formulaire input {
+    font-size: 15px;
+    width: 320px;
+    margin-left: 10px;
+  }
+  .formulaire textarea {
+    font-size: 15px;
+    width: 320px;
+    margin-left: 10px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact h2 {
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  .contact h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .contact img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .localisation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact a {
+    font-size: 15px;
+    margin-top: -12px;
+  }
+  .contact iframe {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .logo img {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .fin {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .header .logo img {
+    width: 80px;
+  }
+  .header h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  .navigation .nav-barre li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation .droite {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .presentation .droite h2 {
+    font-size: 30px;
+    margin-top: -50px;
+    margin-left: 50px;
+  }
+  .presentation li {
+    font-size: 25px;
+    width: 350px;
+    margin-left: 130px;
+  }
+  .presentation span {
+    font-size: 20px;
+  }
+  .annonce h2 {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .annonce p {
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right: 35px;
+  }
+  .annonceSupplementaire h2 {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .annonceSupplementaire .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .annonceSupplementaire .card {
+    margin-top: 20px;
+  }
+  .formulaire {
+    background-size: 0px;
+  }
+  .formulaire h2 {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .formulaire label {
+    font-size: 25px;
+  }
+  .formulaire input {
+    font-size: 25px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact h2 {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .contact h3 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .contact img {
+    width: 20px;
+  }
+  .contact .localisation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact a {
+    font-size: 20px;
+  }
+  .contact iframe {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+    margin-left: 35px;
+  }
+  .footer .logo img {
+    width: 25px;
+  }
+  .footer .fin {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header .logo img {
+    width: 80px;
+  }
+  .header h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  .navigation .nav-barre li {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation .droite h2 {
+    font-size: 35px;
+    margin-top: -100px;
+    margin-left: 50px;
+  }
+  .presentation li {
+    font-size: 25px;
+    width: 350px;
+    margin-left: 80px;
+  }
+  .presentation span {
+    font-size: 20px;
+  }
+  .annonce h2 {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+  .annonce p {
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right: 35px;
+  }
+  .annonceSupplementaire h2 {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .annonceSupplementaire .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .annonceSupplementaire .card {
+    margin-top: 20px;
+  }
+  .formulaire {
+    background-size: 0px;
+  }
+  .formulaire h2 {
+    font-size: 35px;
+  }
+  .formulaire label {
+    font-size: 25px;
+  }
+  .formulaire input {
+    font-size: 25px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .contact2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact h2 {
+    font-size: 30px;
+  }
+  .contact h3 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .contact .localisation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact a {
+    font-size: 20px;
+  }
+  .contact iframe {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+  }
+  .footer .logo img {
+    width: 25px;
+  }
+  .footer .fin {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */
